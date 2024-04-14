@@ -56,6 +56,13 @@ Below is information about what is in each file:
 * `yquantum_classiq_challenge.ipynb`: Jupyter Notebook containing main challenge implementation. Run all cells in order. Change `sparse_states` near the top of the `main` function to change the desired state to prepare. **This file contains our implementation of the challenge requirements**.
 * `yquantum_classiq_challenge_amplitudes.ipynb`: Jupyter Notebook containing implementation of a slight modification of the challenge, but preparing states with complex amplitudes specified (rather than just probabilities). This extension activity fully implements the instructions from the paper rather than the simplified version instructed by the challenge. *This was not required by the challenge instructions.*
 * `yquantum_classiq_challenge_figure2.ipynb`: Jupyter Notebook containing implementation of the replication of part of Figure 2 done for our enrichment (see "Extensions Beyond the Challenge"). *This was not required by the challenge instructions.*
+* Files relating to the preparation of state with the probabilities that correspond to the test cases provided in the specification (circuit and results for each test case):
+    * `example1_circuit.json`: JSON file containing export of constructed circuit for the preparation of the first example test 
+    * `example1_results.json`: JSON file containing export of results when running the constructed circuit (from the first example test)
+    * `example2_circuit.json`: JSON file containing export of constructed circuit for the preparation of the second example test 
+    * `example2_results.json`: JSON file containing export of results when running the constructed circuit (from the second example test)
+    * `example3_circuit.json`: JSON file containing export of constructed circuit for the preparation of the second example test 
+    * `example3_results.json`: JSON file containing export of results when running the constructed circuit (from the second example test)
 * Files relating to the preparation of state with the following probabilities (circuit and results from one test case of our implementation of the challenge requirements):
     * Probability of 000: 0.25
     * Probability of 001: 0.5

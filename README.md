@@ -71,8 +71,9 @@ Below is information about what is in each file:
 
 ## Extensions Beyond the Challenge 
 
-Features implemented beyond what the challenge asked for:
+Due to extra time and for our own enrichment, we implemented several features beyond what the challenge asked for:
 * To produce more readable code, we decided to restructure the obfuscated starter code (including renaming the obfuscated `op1` through `op5` variables) in a way that should hopefully provide a better experience for the reader.
+* To fully implement the problem presented in the paper, we also, in a separate Notebook (`yquantum_classiq_challenge_amplitudes.ipynb`), implemented functionality that prepared a state based on complex amplitudes specified for the basis vectors in each state (rather than just probabilities).
 * To explore the effect of the number of nonzero coefficients in the quantum state to prepare and the number of qubits on the depth of the resulting circuit, we have ran an experiment that measured this effect, replicating the results shown in part of Figure 2 from the paper. Our implementation of this experiment is in `yquantum_classiq_challenge_figure2.ipynb`, with the resulting plot in `depth_by_k.png`
 
 

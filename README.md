@@ -54,13 +54,13 @@ to convert that state to the all-0s state.
 Below is information about what is in each file:
 
 * `yquantum_classiq_challenge.ipynb`: Jupyter Notebook containing main challenge implementation. Run all cells in order. Change `sparse_states` near the top of the `main` function to change the desired state to prepare. 
-* Files relating to the preparation of state with the following probabilities:
+* Files relating to the preparation of state with the following probabilities (circuit and results from one test case):
     * Probability of 000: 0.25
     * Probability of 001: 0.5
     * Probability of 111: 0.25
     * `000_0.25_001_0.5_111_0.25_circuit.json`: JSON file containing export of constructed circuit for the preparation of the above state 
     * `000_0.25_001_0.5_111_0.25_results.json`: JSON file containing export of results when running the constructed circuit 
-* Files relating to the preparation of state with the following probabilities:
+* Files relating to the preparation of state with the following probabilities (circuit and results from another test case):
     * Probability of 000011: 0.4
     * Probability of 111111: 0.6
     * `000011_0.4_111111_0.6_circuit.json`: JSON file containing export of constructed circuit for the preparation of the above state 

@@ -19,6 +19,36 @@ to convert that state to the all-0s state.
 
 ## Function Specifications 
 
+### Helper Functions (Provided)
+
+- `dict_to_3d_array(sparse_states)`: Converts a dictionary of sparse states into a 3D array format.
+- `custom_filter(func, iterable)`: Filters items in an iterable based on a function.
+- `unequal_sets(t, n)`: Determines the best qubit to split a set `t` into subsets with a significant size difference.
+- `process_subsets(t, n, dif_qubits, dif_values)`: Processes subsets to determine difference qubits and values.
+- `toggle_operations(index, n, x_x, ops1, ops2, s)`: Toggles operations based on the index condition.
+- `conditional_toggle(ops1, ops2, n, dif, b, s)`: Conditionally toggles based on a difference.
+- `calc_alpha_beta(x_1, x_2)`: Calculates and adjusts alpha and beta values.
+
+### Our Quantum Functions
+- `unitary_control(qubit: QArray[QBit], contrl: QArray[QBit], target: QParam[int])`: Implements a CNOT gate (i.e. CX gate) with the qubits in `contrl` as the control bit(s) and `qubit[target]` as the target bit.
+- `y_rotation(theta: QParam[float], reg: QArray[QBit], target: QParam[int])`: Implement a Y rotation gate (i.e. RY gate) with `theta` as the angle to rotate in radians and `reg[target]` as the qubit to rotate.
+- `my_controlled_unitary(q:QArray[QBit], w:QParam[float], ctrl:QArray[QBit], target:QParam[int])`: Complete an RY rotation, followed by an X operation (i.e. bit flip), followed by the conjugate transpose of the RY rotation on qubit `q[target]`. `w` specifies the rotation angle in radians and `ctrl` specifies the control bit(s) that determine whether the operation is done on `q[target]` (operation is done only if all control bits are on).
+- `my_unitary(q:QArray[QBit], w:QParam[float],target:QParam[int])`: Complete an RY rotation, followed by an X operation (i.e. bit flip), followed by the conjugate transpose of RY on the qubit `q[target]`. `w` specifies the rotation angle in radians.
+
+### Overarching Functions 
+- `algorithm_1(s,n, gates, x_qubits, cx_qubits, cg_params, final_state, max_num_ctrls)`: Performs "Algorithm 1" as described in the paper, which is the "merging" protocol, along with the logic of iteratively repeating "Algorithm 1" until we have built a circuit whose final state is deterministically one of the states of the computational basis. This function takes in the following parameters:
+    - `s` is a 3D array containing the basis states and probabilities to prepare
+    - `n` is the number of qubits 
+    - `gates` is a list storing strings identifying the different gates in the outputted circuit from left to right (items will likely be appended over the course of the algorithm)
+    - `x_qubits` is a list of qubit-string indices identifying the qubits that the X operators are applied on 
+    - `cx_qubits` is a list of two-element lists, each of which identify the control qubits (1st element) and target qubits (2nd element) that the Controlled X operators are applied on 
+    - `cg_params` is a list that temporarily stores `alpha`, `beta`, `dif_qubits`, and `dif` values (meanings are the same as described in the paper)
+    - `final_state` stores the state of the circuit after all "merge" operations have completed, but before any of the final X gates have been applied
+    - `max_num_ctrls` stores the maximum number of control qubits necessary for the G operations (i.e. RY X RY-dagger)
+
+- `main(psi: Output[QArray[QBit]])`: Contains overarching execution of sparse state preparation, storing the output state within `psi`. A dictionary of desired probabilities of measuring basis states is hard-coded in the local variable `sparse_states` (along with other commented out lines showing other test cases).
+
+
 ## Submitted Files 
 
 Below is information about what is in each file:
@@ -28,6 +58,9 @@ Below is information about what is in each file:
 
 ## Extensions Beyond the Challenge 
 
-To produce more readable code, we also decided to restructure the obfuscated starter code (including renaming the obfuscated `op1` through `op5` variables) in a way that should hopefully provide a better experience for the reader.
+We also decided to implement a few features beyond what the challenge asked for:
+* To produce more readable code, we decided to restructure the obfuscated starter code (including renaming the obfuscated `op1` through `op5` variables) in a way that should hopefully provide a better experience for the reader.
+
+
 
 

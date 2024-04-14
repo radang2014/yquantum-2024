@@ -1,0 +1,174 @@
+{
+  "vendor_format_result": {
+    "backend_name": "aer_simulator",
+    "backend_version": "0.11.2",
+    "date": "2024-04-14T10:55:25.504919",
+    "header": {
+      "backend_name": "aer_simulator",
+      "backend_version": "0.11.2"
+    },
+    "qobj_id": "06cb4bc1-089c-4074-be2f-9c83ce808413",
+    "job_id": "660bc592-2e3b-4b66-9e12-13fcb6ae109a",
+    "status": "COMPLETED",
+    "success": true,
+    "results": [
+      {
+        "shots": 2048,
+        "success": true,
+        "data": {
+          "counts": {
+            "0x1": 1023,
+            "0x7": 501,
+            "0x0": 524
+          }
+        },
+        "meas_level": 2,
+        "header": {
+          "clbit_labels": [
+            [
+              "c154",
+              0
+            ],
+            [
+              "c154",
+              1
+            ],
+            [
+              "c154",
+              2
+            ]
+          ],
+          "creg_sizes": [
+            [
+              "c154",
+              3
+            ]
+          ],
+          "global_phase": 0,
+          "memory_slots": 3,
+          "metadata": {},
+          "n_qubits": 4,
+          "name": "circuit_1677442",
+          "qreg_sizes": [
+            [
+              "q",
+              4
+            ]
+          ],
+          "qubit_labels": [
+            [
+              "q",
+              0
+            ],
+            [
+              "q",
+              1
+            ],
+            [
+              "q",
+              2
+            ],
+            [
+              "q",
+              3
+            ]
+          ]
+        },
+        "status": "DONE",
+        "seed_simulator": 4193308905,
+        "metadata": {
+          "noise": "ideal",
+          "batched_shots_optimization": false,
+          "measure_sampling": true,
+          "parallel_shots": 1,
+          "remapped_qubits": false,
+          "active_input_qubits": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "num_clbits": 3,
+          "parallel_state_update": 4,
+          "sample_measure_time": 0.000369915,
+          "num_qubits": 4,
+          "device": "CPU",
+          "input_qubit_map": [
+            [
+              3,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "method": "statevector",
+          "fusion": {
+            "applied": false,
+            "max_fused_qubits": 5,
+            "threshold": 14,
+            "enabled": true
+          }
+        },
+        "time_taken": 0.00221998
+      }
+    ],
+    "metadata": {
+      "time_taken": 0.002447306,
+      "time_taken_execute": 0.002261965,
+      "mpi_rank": 0,
+      "num_mpi_processes": 1,
+      "max_gpu_memory_mb": 0,
+      "max_memory_mb": 15720,
+      "parallel_experiments": 1,
+      "time_taken_load_qobj": 0.000176322,
+      "num_processes_per_experiments": 1,
+      "omp_enabled": true
+    },
+    "time_taken": 0.002553224563598633
+  },
+  "counts": {
+    "111": 501,
+    "001": 1023,
+    "000": 524
+  },
+  "counts_lsb_right": true,
+  "parsed_states": {
+    "111": {
+      "psi": 7
+    },
+    "001": {
+      "psi": 1
+    },
+    "000": {
+      "psi": 0
+    }
+  },
+  "histogram": null,
+  "output_qubits_map": {
+    "psi": [
+      0,
+      1,
+      2
+    ]
+  },
+  "state_vector": null,
+  "parsed_state_vector_states": null,
+  "physical_qubits_map": {
+    "psi": [
+      1,
+      2,
+      3
+    ]
+  },
+  "num_shots": 2048
+}

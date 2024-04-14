@@ -1,0 +1,205 @@
+{
+  "vendor_format_result": {
+    "backend_name": "aer_simulator",
+    "backend_version": "0.11.2",
+    "date": "2024-04-14T12:04:38.703162",
+    "header": {
+      "backend_name": "aer_simulator",
+      "backend_version": "0.11.2"
+    },
+    "qobj_id": "cde7bf9b-b791-45c2-be40-b9f80b020533",
+    "job_id": "b85c328b-2d8c-4bbd-96b7-9c94f475b4d9",
+    "status": "COMPLETED",
+    "success": true,
+    "results": [
+      {
+        "shots": 2048,
+        "success": true,
+        "data": {
+          "counts": {
+            "0x3f": 1214,
+            "0x3": 834
+          }
+        },
+        "meas_level": 2,
+        "header": {
+          "clbit_labels": [
+            [
+              "c157",
+              0
+            ],
+            [
+              "c157",
+              1
+            ],
+            [
+              "c157",
+              2
+            ],
+            [
+              "c157",
+              3
+            ],
+            [
+              "c157",
+              4
+            ],
+            [
+              "c157",
+              5
+            ]
+          ],
+          "creg_sizes": [
+            [
+              "c157",
+              6
+            ]
+          ],
+          "global_phase": 0,
+          "memory_slots": 6,
+          "metadata": {},
+          "n_qubits": 6,
+          "name": "circuit_1679419",
+          "qreg_sizes": [
+            [
+              "q",
+              6
+            ]
+          ],
+          "qubit_labels": [
+            [
+              "q",
+              0
+            ],
+            [
+              "q",
+              1
+            ],
+            [
+              "q",
+              2
+            ],
+            [
+              "q",
+              3
+            ],
+            [
+              "q",
+              4
+            ],
+            [
+              "q",
+              5
+            ]
+          ]
+        },
+        "status": "DONE",
+        "seed_simulator": 3163568035,
+        "metadata": {
+          "noise": "ideal",
+          "batched_shots_optimization": false,
+          "measure_sampling": true,
+          "parallel_shots": 1,
+          "remapped_qubits": false,
+          "active_input_qubits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "num_clbits": 6,
+          "parallel_state_update": 4,
+          "sample_measure_time": 0.000490785,
+          "num_qubits": 6,
+          "device": "CPU",
+          "input_qubit_map": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "method": "statevector",
+          "fusion": {
+            "applied": false,
+            "max_fused_qubits": 5,
+            "threshold": 14,
+            "enabled": true
+          }
+        },
+        "time_taken": 0.002970353
+      }
+    ],
+    "metadata": {
+      "time_taken": 0.003256771,
+      "time_taken_execute": 0.003010378,
+      "mpi_rank": 0,
+      "num_mpi_processes": 1,
+      "max_gpu_memory_mb": 0,
+      "max_memory_mb": 15720,
+      "parallel_experiments": 1,
+      "time_taken_load_qobj": 0.000239383,
+      "num_processes_per_experiments": 1,
+      "omp_enabled": true
+    },
+    "time_taken": 0.003365039825439453
+  },
+  "counts": {
+    "111111": 1214,
+    "000011": 834
+  },
+  "counts_lsb_right": true,
+  "parsed_states": {
+    "111111": {
+      "psi": 63
+    },
+    "000011": {
+      "psi": 3
+    }
+  },
+  "histogram": null,
+  "output_qubits_map": {
+    "psi": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "state_vector": null,
+  "parsed_state_vector_states": null,
+  "physical_qubits_map": {
+    "psi": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "num_shots": 2048
+}

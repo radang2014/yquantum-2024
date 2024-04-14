@@ -2,7 +2,7 @@
 
 ## Overview
 
-Our approach was primarily based on the algorithms presented in "An Efficient Algorithm for Sparse Quantum State Preparation" by Niels Gleinig and Torsten Hoefler. This involved a two step algorithm implemented in Python using the Classiq API over a 24-hour period between April 13th and April 14th, 2024 as part of |Y>Quantum 2024. Starter code was provided by Tanner Kocher for this challenge.
+Our approach was primarily based on the algorithms presented in "An Efficient Algorithm for Sparse Quantum State Preparation" by Niels Gleinig and Torsten Hoefler. This involved a two step algorithm implemented in Python using the Classiq API over a 24-hour period as part of |Y>Quantum 2024. Starter code was provided by Tanner Kocher for this challenge.
 
 ## Problem Statement
 
@@ -53,12 +53,23 @@ to convert that state to the all-0s state.
 
 Below is information about what is in each file:
 
-* `yquantum_classiq_challenge.ipynb`: Jupyter Notebook containing main challenge implementation 
-* TODO: Write about other submitted files 
+* `yquantum_classiq_challenge.ipynb`: Jupyter Notebook containing main challenge implementation. Run all cells in order. Change `sparse_states` near the top of the `main` function to change the desired state to prepare. 
+* Files relating to the preparation of state with the following probabilities:
+    * Probability of 000: 0.25
+    * Probability of 001: 0.5
+    * Probability of 111: 0.25
+    * `000_0.25_001_0.5_111_0.25_circuit.json`: JSON file containing export of constructed circuit for the preparation of the above state 
+    * `000_0.25_001_0.5_111_0.25_results.json`: JSON file containing export of results when running the constructed circuit 
+* Files relating to the preparation of state with the following probabilities:
+    * Probability of 000011: 0.4
+    * Probability of 111111: 0.6
+    * `000011_0.4_111111_0.6_circuit.json`: JSON file containing export of constructed circuit for the preparation of the above state 
+    * `000011_0.4_111111_0.6_results.json`: JSON file containing export of results when running the constructed circuit 
+* `README.md`: This file
 
 ## Extensions Beyond the Challenge 
 
-We also decided to implement a few features beyond what the challenge asked for:
+Features implemented beyond what the challenge asked for:
 * To produce more readable code, we decided to restructure the obfuscated starter code (including renaming the obfuscated `op1` through `op5` variables) in a way that should hopefully provide a better experience for the reader.
 
 

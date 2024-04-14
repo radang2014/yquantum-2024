@@ -53,7 +53,8 @@ to convert that state to the all-0s state.
 
 Below is information about what is in each file:
 
-* `yquantum_classiq_challenge.ipynb`: Jupyter Notebook containing main challenge implementation. Run all cells in order. Change `sparse_states` near the top of the `main` function to change the desired state to prepare. 
+* `yquantum_classiq_challenge.ipynb`: Jupyter Notebook containing main challenge implementation. Run all cells in order. Change `sparse_states` near the top of the `main` function to change the desired state to prepare. **This file contains our implementation of the challenge requirements**.
+* `yquantum_classiq_challenge_figure2.ipynb`: Jupyter Notebook containing implementation of the replication of part of Figure 2 done for our enrichment (see "Extensions Beyond the Challenge"). *This was not required by the challenge instructions.*
 * Files relating to the preparation of state with the following probabilities (circuit and results from one test case):
     * Probability of 000: 0.25
     * Probability of 001: 0.5
@@ -71,7 +72,7 @@ Below is information about what is in each file:
 
 Features implemented beyond what the challenge asked for:
 * To produce more readable code, we decided to restructure the obfuscated starter code (including renaming the obfuscated `op1` through `op5` variables) in a way that should hopefully provide a better experience for the reader.
-
+* To explore the effect of the number of nonzero coefficients in the quantum state to prepare and the number of qubits on the depth of the resulting circuit, we have ran an experiment that measured this effect, replicating the results shown in part of Figure 2 from the paper. Our implementation of this experiment is in `yquantum_classiq_challenge_figure2.ipynb`, with the resulting plot in `depth_by_k.png`
 
 
 
